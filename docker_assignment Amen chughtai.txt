@@ -1,0 +1,27 @@
+
+docker login
+
+docker pull mysql
+
+docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -d mysql
+
+docker ps
+
+Docker exec -it  cc934870098a mysql -uroot -p
+
+enter password as password
+
+CREATE TABLE Persons (
+    PersonID varchar(10),
+    Name varchar(40),
+    City varchar(40)
+);
+
+INSERT INTO Persons 
+VALUES ('255', 'Amen', 'Karachi');
+
+INSERT INTO Persons 
+VALUES ('256', 'Taha', 'Lahore');
+
+SELECT PersonID FROM Persons; 
+
